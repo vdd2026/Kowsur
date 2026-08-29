@@ -1,0 +1,753 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Vitus Design & Development</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        /* Navigation */
+        nav {
+            background: #ffffff;
+            padding: 20px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .logo {
+            font-size: 25px;
+            font-weight: bold;
+            color: #1d4d3a;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 30px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+        }
+
+        nav ul li a:hover {
+            color: #1d4d3a;
+        }
+
+        /* Hero */
+        .hero {
+            height: 600px;
+            background:
+                linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)),
+                url("https://images.unsplash.com/photo-1600607687920-4e2a09cf159d")
+                center/cover;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+        }
+
+        .hero h1 {
+            font-size: 55px;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 22px;
+            margin-bottom: 30px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 14px 30px;
+            background: #c49a6c;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+
+        .btn:hover {
+            background: #a77c50;
+        }
+
+        /* Sections */
+        section {
+            padding: 80px 8%;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .section-title h2 {
+            font-size: 38px;
+            color: #1d4d3a;
+        }
+
+        /* Projects */
+        .projects {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+
+        .project {
+            background: white;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .project img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+        }
+
+        .project-content {
+            padding: 25px;
+        }
+
+        .project-content h3 {
+            color: #1d4d3a;
+            margin-bottom: 10px;
+        }
+/* Project Status */
+
+.project-status {
+    display: inline-block;
+    font-size: 13px;
+    font-weight: bold;
+    color: #c49a6c;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+    letter-spacing: 1px;
+}
+
+.project-status.commercial {
+    color: #1d4d3a;
+}
+
+
+/* Project Location */
+
+.location {
+    color: #777;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+
+/* Project Details */
+
+.project-details {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    margin: 20px 0;
+    padding-top: 15px;
+    border-top: 1px solid #eee;
+}
+
+.project-details div {
+    display: flex;
+    flex-direction: column;
+}
+
+.project-details strong {
+    font-size: 12px;
+    color: #888;
+    text-transform: uppercase;
+}
+
+.project-details span {
+    font-size: 14px;
+    color: #333;
+    margin-top: 3px;
+}
+
+
+/* View Details Button */
+
+.project-btn {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 11px 20px;
+    background: #1d4d3a;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.project-btn:hover {
+    background: #c49a6c;
+}
+        /* About */
+        .about {
+            background: #f5f5f5;
+            text-align: center;
+        }
+
+        .about p {
+            max-width: 850px;
+            margin: auto;
+            font-size: 18px;
+        }
+
+        /* Contact */
+        .contact {
+            text-align: center;
+        }
+
+        .contact p {
+            margin: 10px 0;
+            font-size: 18px;
+        }
+
+        /* Footer */
+        footer {
+            background: #1d4d3a;
+            color: white;
+            text-align: center;
+            padding: 25px;
+        }
+
+        /* Mobile */
+        @media (max-width: 768px) {
+
+            nav {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            nav ul {
+                gap: 15px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .hero h1 {
+                font-size: 38px;
+            }
+
+            .projects {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav>
+       <a href="index.html" class="logo-link">
+    <img src="VDD Logo.png" alt="Vitus Design and Development">
+</a>
+
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+
+    <!-- Hero -->
+    <section class="hero" id="home">
+
+        <div>
+           <h1>Building Dreams.<br>Shaping Futures.</h1>
+
+<p>
+    Premium Residential & Commercial Developments
+</p>
+
+<div class="hero-buttons">
+
+    <a href="#projects" class="btn">
+        Explore Projects
+    </a>
+
+    <a href="#contact" class="btn btn-outline">
+        Contact Us
+    </a>
+
+</div>
+        </div>
+
+    </section>
+
+
+<!-- Projects -->
+<section id="projects">
+
+    <div class="section-title">
+        <h2>Our Projects</h2>
+        <p>Discover our residential and commercial developments</p>
+    </div>
+
+    <div class="projects">
+
+        <!-- Project 1 -->
+        <div class="project">
+
+            <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c"
+                 alt="Griho Spondon">
+
+            <div class="project-content">
+
+                <span class="project-status">
+                    Residential Project
+                </span>
+
+                <h3>Griho Spondon</h3>
+
+                <p class="location">
+                    📍 Dhaka, Bangladesh
+                </p>
+
+                <div class="project-details">
+
+                    <div>
+                        <strong>Type</strong>
+                        <span>Residential</span>
+                    </div>
+
+                    <div>
+                        <strong>Project</strong>
+                        <span>Griho Spondon</span>
+                    </div>
+
+                </div>
+
+                <a href="griho-spondon.html" class="project-btn">
+    View Details →
+</a>
+
+            </div>
+
+        </div>
+
+
+        <!-- Project 2 -->
+        <div class="project">
+
+            <img src="https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea"
+                 alt="Safety Garden City">
+
+            <div class="project-content">
+
+                <span class="project-status">
+                    Residential Project
+                </span>
+
+                <h3>Safety Garden City</h3>
+
+                <p class="location">
+                    📍 Dhaka, Bangladesh
+                </p>
+
+                <div class="project-details">
+
+                    <div>
+                        <strong>Land Area</strong>
+                        <span>28.69 Katha</span>
+                    </div>
+
+                    <div>
+                        <strong>Buildings</strong>
+                        <span>02</span>
+                    </div>
+
+                    <div>
+                        <strong>Configuration</strong>
+                        <span>B+G+12</span>
+                    </div>
+
+                    <div>
+                        <strong>Flat Area</strong>
+                        <span>1000 + 200 sft</span>
+                    </div>
+
+                </div>
+
+<a href="project-safety-garden.html" class="project-btn">
+    View Details →
+</a>
+            </div>
+
+        </div>
+
+
+        <!-- Project 3 -->
+        <div class="project">
+
+            <img src="https://images.unsplash.com/photo-1600607688969-a5bfcd646154"
+                 alt="Grihayan Commercial Complex">
+
+            <div class="project-content">
+
+                <span class="project-status commercial">
+                    Commercial Project
+                </span>
+
+                <h3>Grihayan Commercial Complex</h3>
+
+                <p class="location">
+                    📍 Mirpur 16, Dhamalcoat, Dhaka
+                </p>
+
+                <div class="project-details">
+
+                    <div>
+                        <strong>Type</strong>
+                        <span>Commercial</span>
+                    </div>
+
+                    <div>
+                        <strong>Building</strong>
+                        <span>12 Storied</span>
+                    </div>
+
+                    <div>
+                        <strong>Location</strong>
+                        <span>Mirpur 16</span>
+                    </div>
+
+                    <div>
+                        <strong>Area</strong>
+                        <span>Dhamalcoat</span>
+                    </div>
+
+                </div>
+
+               <a href="grihayan-commercial.html" class="project-btn">
+    View Details →
+</a>4:46 PM 8/29/2026
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+   <!-- CONTACT & ENQUIRY -->
+
+<section class="contact-section" id="contact">
+
+    <div class="section-title">
+
+        <h2>Contact Us</h2>
+
+        <p>
+            Let us help you find your ideal property
+        </p>
+
+    </div>
+
+
+    <div class="contact-container">
+
+
+        <!-- CONTACT INFORMATION -->
+
+        <div class="contact-info">
+
+            <h3>
+                Vitus Design & Development
+            </h3>
+
+            <p>
+                We are committed to creating quality
+                residential and commercial developments
+                with thoughtful design and reliable
+                construction.
+            </p>
+
+
+            <div class="contact-item">
+
+                <strong>📍 Office</strong>
+
+                <span>
+                    Dhaka, Bangladesh
+                </span>
+
+            </div>
+
+
+            <div class="contact-item">
+
+                <strong>📞 Phone</strong>
+
+                <span>
+                    +880 1914119855
+                </span>
+
+            </div>
+
+
+            <div class="contact-item">
+
+                <strong>✉ Email</strong>
+
+                <span>
+                    vdd2026@gmail.com
+                </span>
+
+            </div>
+
+
+            <a
+                href="https://wa.me/8801914119855"
+                class="whatsapp-contact"
+                target="_blank"
+            >
+                💬 Chat on WhatsApp
+            </a>
+
+        </div>
+
+
+        <!-- ENQUIRY FORM -->
+
+        <div class="enquiry-form">
+
+            <h3>
+                Send an Enquiry
+            </h3>
+
+
+            <form
+                onsubmit="sendEnquiry(event)"
+            >
+
+                <input
+                    type="text"
+                    id="name"
+                    placeholder="Your Name"
+                    required
+                >
+
+
+                <input
+                    type="tel"
+                    id="phone"
+                    placeholder="Phone Number"
+                    required
+                >
+
+
+                <input
+                    type="email"
+                    id="email"
+                    placeholder="Email Address"
+                >
+
+
+                <select id="project" required>
+
+                    <option value="">
+                        Select Project
+                    </option>
+
+                    <option value="Griho Spondon">
+                        Griho Spondon
+                    </option>
+
+                    <option value="Safety Garden City">
+                        Safety Garden City
+                    </option>
+
+                    <option value="Grihayan Commercial Complex">
+                        Grihayan Commercial Complex
+                    </option>
+
+                </select>
+
+
+                <textarea
+                    id="message"
+                    rows="5"
+                    placeholder="Your Message"
+                ></textarea>
+
+
+                <button
+                    type="submit"
+                    class="btn"
+                >
+                    Send Enquiry
+                </button>
+
+            </form>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- GOOGLE MAP -->
+
+<section class="map-section">
+
+    <div class="section-title">
+
+        <h2>Find Us</h2>
+
+        <p>
+            Dhaka, Bangladesh
+        </p>
+
+    </div>
+
+
+    <div class="map-container">
+
+        <iframe
+
+            src="https://www.google.com/maps?q=Dhaka,Bangladesh&output=embed"
+
+            width="100%"
+
+            height="400"
+
+            style="border:0;"
+
+            allowfullscreen=""
+
+            loading="lazy"
+
+            referrerpolicy="no-referrer-when-downgrade">
+
+        </iframe>
+
+    </div>
+
+</section>
+
+
+    <!-- Footer -->
+    <footer>
+
+        <p>
+            © 2026 Vitus Design & Development.
+            All Rights Reserved.
+        </p>
+
+    </footer>
+
+
+    <!-- JavaScript -->
+    <script>
+
+        function showMessage() {
+
+            alert(
+                "Thank you for your interest! " +
+                "Our representative will contact you soon."
+            );
+
+        }
+
+    </script>
+<script>
+
+function sendEnquiry(event) {
+
+    event.preventDefault();
+
+    const name =
+        document.getElementById("name").value;
+
+    const phone =
+        document.getElementById("phone").value;
+
+    const email =
+        document.getElementById("email").value;
+
+    const project =
+        document.getElementById("project").value;
+
+    const message =
+        document.getElementById("message").value;
+
+
+    const whatsappNumber =
+        "8801914119855";
+
+
+    const text =
+        "VITUS PROJECT ENQUIRY%0A%0A" +
+
+        "Name: " + name + "%0A" +
+
+        "Phone: " + phone + "%0A" +
+
+        "Email: " + email + "%0A" +
+
+        "Project: " + project + "%0A" +
+
+        "Message: " + message;
+
+
+    const url =
+        "https://wa.me/" +
+        whatsappNumber +
+        "?text=" +
+        text;
+
+
+    window.open(url, "_blank");
+
+}
+
+</script>
+<!-- FLOATING WHATSAPP BUTTON -->
+
+<a
+    href="https://wa.me/8801914119855"
+    class="whatsapp"
+    target="_blank"
+    title="Chat on WhatsApp"
+>
+    💬
+</a>
+</body>
+</html>

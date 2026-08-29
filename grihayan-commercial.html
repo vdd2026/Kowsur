@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>
+        Grihayan Commercial Complex |
+        Vitus Design & Development
+    </title>
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        nav {
+            background: white;
+            padding: 20px 8%;
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .logo {
+            font-size: 25px;
+            font-weight: bold;
+            color: #1d4d3a;
+        }
+
+        nav a {
+            color: #333;
+            text-decoration: none;
+            margin-left: 25px;
+        }
+
+        nav a:hover {
+            color: #1d4d3a;
+        }
+
+        .hero {
+
+            height: 500px;
+
+            background:
+                linear-gradient(
+                    rgba(0,0,0,0.5),
+                    rgba(0,0,0,0.5)
+                ),
+                url("https://images.unsplash.com/photo-1486406146926-c627a92ad1ab")
+                center/cover;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            text-align: center;
+            color: white;
+        }
+
+        .hero h1 {
+            font-size: 52px;
+            margin-bottom: 15px;
+        }
+
+        .hero p {
+            font-size: 20px;
+        }
+
+        section {
+            padding: 70px 8%;
+        }
+
+        .title {
+            text-align: center;
+            margin-bottom: 45px;
+        }
+
+        .title h2 {
+            font-size: 38px;
+            color: #1d4d3a;
+        }
+
+        .overview {
+
+            display: grid;
+
+            grid-template-columns: 1fr 1fr;
+
+            gap: 50px;
+
+            align-items: center;
+        }
+
+        .overview img {
+            width: 100%;
+            border-radius: 8px;
+        }
+
+        .overview h2 {
+            color: #1d4d3a;
+            margin-bottom: 20px;
+        }
+
+        .overview p {
+            font-size: 17px;
+            margin-bottom: 15px;
+        }
+
+        .details {
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(4, 1fr);
+
+            gap: 20px;
+        }
+
+        .box {
+
+            padding: 30px 20px;
+
+            text-align: center;
+
+            background: #f5f5f5;
+
+            border-radius: 8px;
+        }
+
+        .box h3 {
+
+            color: #1d4d3a;
+
+            font-size: 26px;
+
+            margin-bottom: 8px;
+        }
+
+        .box p {
+
+            color: #777;
+
+            font-size: 14px;
+        }
+
+        .features {
+
+            background: #f5f5f5;
+        }
+
+        .feature-list {
+
+            max-width: 900px;
+
+            margin: auto;
+
+            display: grid;
+
+            grid-template-columns:
+                1fr 1fr;
+
+            gap: 15px;
+        }
+
+        .feature {
+
+            background: white;
+
+            padding: 18px;
+
+            border-radius: 5px;
+        }
+
+        .btn {
+
+            display: inline-block;
+
+            padding: 14px 28px;
+
+            background: #1d4d3a;
+
+            color: white;
+
+            text-decoration: none;
+
+            border-radius: 5px;
+
+            font-weight: bold;
+
+            margin-top: 15px;
+        }
+
+        .btn:hover {
+
+            background: #c49a6c;
+        }
+
+        footer {
+
+            background: #1d4d3a;
+
+            color: white;
+
+            text-align: center;
+
+            padding: 25px;
+        }
+
+        @media (max-width: 768px) {
+
+            nav {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .hero h1 {
+                font-size: 36px;
+            }
+
+            .overview {
+                grid-template-columns: 1fr;
+            }
+
+            .details {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .feature-list {
+                grid-template-columns: 1fr;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <nav>
+
+        <div class="logo">
+            VITUS
+        </div>
+
+        <div>
+
+            <a href="index.html">
+                Home
+            </a>
+
+            <a href="index.html#projects">
+                Projects
+            </a>
+
+            <a href="index.html#contact">
+                Contact
+            </a>
+
+        </div>
+
+    </nav>
+
+
+    <section class="hero">
+
+        <div>
+
+            <h1>
+                Grihayan Commercial Complex
+            </h1>
+
+            <p>
+                Modern Commercial Development
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <section>
+
+        <div class="title">
+
+            <h2>
+                Project Overview
+            </h2>
+
+            <p>
+                A proposed commercial development
+            </p>
+
+        </div>
+
+
+        <div class="overview">
+
+            <div>
+
+                <img
+                    src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab"
+                    alt="Grihayan Commercial Complex"
+                >
+
+            </div>
+
+
+            <div>
+
+                <h2>
+                    Grihayan Commercial Complex
+                </h2>
+
+                <p>
+                    A proposed modern commercial development
+                    designed for business and investment.
+                </p>
+
+                <p>
+                    The project is located at
+                    Mirpur 16, Dhamalcoat, Dhaka.
+                </p>
+
+                <a
+                    href="index.html#contact"
+                    class="btn"
+                >
+                    Investment Enquiry
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <section>
+
+        <div class="title">
+
+            <h2>
+                Project Information
+            </h2>
+
+        </div>
+
+
+        <div class="details">
+
+
+            <div class="box">
+
+                <h3>
+                    12
+                </h3>
+
+                <p>
+                    Storied
+                </p>
+
+            </div>
+
+
+            <div class="box">
+
+                <h3>
+                    Commercial
+                </h3>
+
+                <p>
+                    Project Type
+                </p>
+
+            </div>
+
+
+            <div class="box">
+
+                <h3>
+                    Mirpur 16
+                </h3>
+
+                <p>
+                    Location
+                </p>
+
+            </div>
+
+
+            <div class="box">
+
+                <h3>
+                    Dhamalcoat
+                </h3>
+
+                <p>
+                    Area
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <section class="features">
+
+        <div class="title">
+
+            <h2>
+                Project Highlights
+            </h2>
+
+        </div>
+
+
+        <div class="feature-list">
+
+            <div class="feature">
+                ✓ 12-Storey Commercial Development
+            </div>
+
+            <div class="feature">
+                ✓ Strategic Mirpur 16 Location
+            </div>
+
+            <div class="feature">
+                ✓ Dhamalcoat Area
+            </div>
+
+            <div class="feature">
+                ✓ Business & Investment Opportunity
+            </div>
+
+            <div class="feature">
+                ✓ Modern Commercial Planning
+            </div>
+
+            <div class="feature">
+                ✓ Designed for Business Use
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <section>
+
+        <div class="title">
+
+            <h2>
+                Interested in This Project?
+            </h2>
+
+            <p>
+                Contact us for commercial space
+                and investment information.
+            </p>
+
+            <a
+                href="index.html#contact"
+                class="btn"
+            >
+                Contact Us
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <footer>
+
+        <p>
+            © 2026 Vitus Design & Development.
+            All Rights Reserved.
+        </p>
+
+    </footer>
+
+
+</body>
+
+</html>
